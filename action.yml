@@ -1,0 +1,24 @@
+name: 'Webhook Handler Action'
+author: 'WaxArsatia'
+description: 'Yet Another Webhook Handler that support await or not await for response'
+inputs:
+  webhook-url:
+    description: 'Webhook url to trigger'
+    required: true
+  await-response:
+    description: 'Await for response from webhook'
+    required: false
+    default: 'false'
+  method:
+    description: 'HTTP Method to use'
+    required: false
+    default: 'POST'
+  body:
+    description: 'Body to send to webhook'
+    required: false
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+branding:
+  color: 'blue'
+  icon: 'send'
